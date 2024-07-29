@@ -1,0 +1,12 @@
+## Command used to make app--
+
+root@ip-172-31-35-90:~# apt-get install git -y (Git installed)
+git clone  https://github.com/ashishrpandey/example-voting-app (App imported from git)
+cd /example-voting-app/k8s-specifications
+root@ip-172-31-35-90:~/example-voting-app/k8s-specifications# kubectl apply -f .(app created)
+root@ip-172-31-35-90:~/example-voting-app/k8s-specifications# kubectl get all .(pods displayed)
+#Following are the observations:-
+If we delete pods their replica will be created again.But when we delete db pod the result will not store in database.
+In order to work result pod and data should store data permanently , I used the concept of PV(Persistent Volume) and  PVC(Persistent Volume Claim).
+
+
